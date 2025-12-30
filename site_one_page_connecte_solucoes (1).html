@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connecte Soluções | Segurança e Automação</title>
+  <meta name="description" content="Manutenção e instalação de alarmes, sensores, câmeras, cerca elétrica e automatizadores em Santa Vitória do Palmar e Região." />
+
+  <!-- SEO -->
+  <meta name="keywords" content="alarmes, câmeras, cerca elétrica, automação, segurança, Santa Vitória do Palmar">
+
+  <style>
+    :root {
+      --primary:#0f4c81;
+      --secondary:#00c2a8;
+      --dark:#0b1c2d;
+      --light:#f5f7fa;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+    body{background:var(--light);color:#333;scroll-behavior:smooth}
+
+    header{
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff;
+      padding:80px 20px;
+      text-align:center
+    }
+    header img{max-width:180px;margin-bottom:20px}
+    header h1{font-size:2.6rem}
+
+    nav{
+      position:sticky;top:0;background:#fff;display:flex;justify-content:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);z-index:10
+    }
+    nav a{padding:15px 18px;text-decoration:none;color:var(--dark);font-weight:bold}
+    nav a:hover{color:var(--secondary)}
+
+    section{padding:70px 20px;max-width:1100px;margin:auto}
+    section h2{text-align:center;color:var(--primary);font-size:2rem;margin-bottom:40px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+
+    .card{
+      background:#fff;border-radius:15px;overflow:hidden;cursor:pointer;
+      box-shadow:0 10px 25px rgba(0,0,0,.1);
+      transition:transform .4s, box-shadow .4s
+    }
+    .card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 40px rgba(0,0,0,.15)}
+    .card img{width:100%;height:180px;object-fit:cover}
+    .card div{padding:20px}
+
+    .highlight{background:var(--dark);color:#fff;border-radius:20px;padding:50px}
+
+    .contact{background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;border-radius:20px;padding:40px}
+
+    footer{text-align:center;padding:20px;background:#0b1c2d;color:#fff}
+
+    /* WhatsApp */
+    .whatsapp{
+      position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;
+      padding:15px 22px;border-radius:50px;text-decoration:none;font-weight:bold;
+      box-shadow:0 5px 20px rgba(0,0,0,.4);z-index:999
+    }
+
+    /* Modal */
+    .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:1000}
+    .modal-content{background:#fff;max-width:600px;margin:8% auto;padding:30px;border-radius:15px;animation:fadeIn .4s}
+    @keyframes fadeIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+
+    /* Chat IA */
+    .chat-btn{position:fixed;bottom:90px;right:20px;background:#0f4c81;color:#fff;padding:15px 20px;border-radius:50px;cursor:pointer;z-index:999}
+    .chat-box{display:none;position:fixed;bottom:150px;right:20px;width:320px;background:#fff;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.3);overflow:hidden;z-index:999}
+    .chat-header{background:#0f4c81;color:#fff;padding:12px;font-weight:bold}
+    .chat-body{padding:15px;height:220px;overflow-y:auto;font-size:.9rem}
+    .chat-input{display:flex}
+    .chat-input input{flex:1;padding:10px;border:none;border-top:1px solid #ddd}
+    .chat-input button{background:#00c2a8;color:#fff;border:none;padding:10px 15px}
+
+    /* FAQ */
+    .faq details{background:#fff;padding:15px;border-radius:10px;margin-bottom:15px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+    .faq summary{font-weight:bold;cursor:pointer;color:var(--primary)}
+
+  </style>
+</head>
+<body>
+
+<header id="inicio">
+  <img src="logo.png" alt="Connecte Soluções">
+  <h1>Connecte Soluções</h1>
+  <p>Segurança, automação e tecnologia inteligente</p>
+  <p><strong>Santa Vitória do Palmar e Região</strong></p>
+</header>
+
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#faq">Dúvidas</a>
+  <a href="#ia">IA</a>
+  <a href="#contato">Contato</a>
+  <a href="#contato" style="background:#00c2a8;color:#fff;border-radius:20px;margin:8px">Solicitar Orçamento</a>
+</nav>
+
+<section id="servicos">
+<h2>Soluções Inteligentes em Segurança e Automação</h2>
+<p style="text-align:center;max-width:800px;margin:0 auto 40px">Atuamos com instalação, manutenção e modernização de sistemas de segurança e automação, oferecendo soluções confiáveis para residências, comércios, empresas e condomínios.</p>
+<div class="grid">
+  <div class="card" onclick="openModal('Alarmes e Sensores','Sistemas de alarme e sensores são essenciais para detectar invasões, prevenir perdas e garantir tranquilidade. Indicados para residências, comércios, indústrias e áreas perimetrais.')">
+    <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da">
+    <div><h3>Alarmes & Sensores</h3><p>Proteção ativa 24h com resposta imediata.</p></div>
+  </div>
+  <div class="card" onclick="openModal('Câmeras de Monitoramento','O CFTV permite visualização em tempo real, gravação contínua e acesso remoto pelo celular, aumentando o controle e a segurança do seu patrimônio.')">
+    <img src="https://images.unsplash.com/photo-1558002038-1055907df827">
+    <div><h3>Câmeras de Monitoramento</h3><p>Controle total onde você estiver.</p></div>
+  </div>
+  <div class="card" onclick="openModal('Consultoria Técnica','Nossa consultoria avalia riscos, necessidades e estrutura para indicar soluções eficientes, econômicas e escaláveis.')">
+    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
+    <div><h3>Consultoria Especializada</h3><p>Soluções sob medida para seu projeto.</p></div>
+  </div>
+</div>
+<p style="text-align:center;margin-top:40px"><strong>👉 Solicite agora uma avaliação técnica com nossos especialistas.</strong></p>
+</section>
+
+<section id="faq" class="faq">
+<h2>Dúvidas Frequentes</h2>
+<details><summary>Quanto custa um sistema de alarme?</summary><p>O valor varia conforme o tamanho do local e o tipo de equipamento. Nossa equipe faz uma avaliação personalizada.</p></details>
+<details><summary>Consigo acompanhar as câmeras pelo celular?</summary><p>Sim. Você terá acesso remoto em tempo real pelo smartphone.</p></details>
+<details><summary>Vocês fazem manutenção?</summary><p>Sim. Trabalhamos com manutenção preventiva e corretiva.</p></details>
+<details><summary>Atendem empresas e residências?</summary><p>Atendemos residências, comércios, empresas e condomínios.</p></details>
+</section>
+
+<section id="ia" class="highlight">
+<h2>Assistente Virtual Inteligente – Elisa</h2>
+<p>A Elisa é nossa assistente virtual preparada para orientar você desde o primeiro contato até a melhor solução em segurança e automação.</p>
+<p><strong>✔ Atendimento rápido</strong><br>
+<strong>✔ Direcionamento para consultores</strong><br>
+<strong>✔ Suporte técnico inicial</strong></p>
+<p><em>Fale agora com a Elisa e descubra a melhor solução para sua residência ou empresa.</em></p>
+</section>
+
+<section id="contato">
+<div class="contact">
+<h2>Contato</h2>
+<p><strong>📍 Região:</strong> Santa Vitória do Palmar e Região</p>
+<p><strong>📞 WhatsApp:</strong> (53) 99937-0805</p>
+<p><strong>🕘 Atendimento:</strong> Comercial e Residencial</p>
+<p style="margin-top:20px"><a href="https://wa.me/5553999370805" target="_blank" style="background:#25D366;color:#fff;padding:15px 25px;border-radius:30px;text-decoration:none;font-weight:bold">Solicitar Orçamento Agora</a></p>
+</div>
+</section>
+
+<footer>
+<p>© 2025 Connecte Soluções</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5553999370805" target="_blank">WhatsApp</a>
+
+<div class="chat-btn" onclick="toggleChat()">Fale com a Elisa</div>
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">Elisa - Assistente Virtual</div>
+  <div class="chat-body" id="chatBody">
+  <p><strong>Elisa:</strong> Olá! 👋 Sou a Elisa, assistente virtual da Connecte Soluções.<br>Como posso te ajudar hoje?</p>
+</div>
+  <div class="chat-input">
+  <input id="chatInput" placeholder="Digite sua dúvida...">
+  <button onclick="sendMsg()">Enviar</button>
+</div>
+</div>
+
+<div class="modal" id="modal"><div class="modal-content"><h2 id="modalTitle"></h2><p id="modalText"></p><br><button onclick="closeModal()">Fechar</button></div></div>
+
+<script>
+function openModal(t,t2){
+  document.getElementById('modal').style.display='block';
+  document.getElementById('modalTitle').innerText=t;
+  document.getElementById('modalText').innerText=t2;
+}
+function closeModal(){document.getElementById('modal').style.display='none'}
+function toggleChat(){
+  const c=document.getElementById('chatBox');
+  c.style.display=c.style.display==='block'?'none':'block'
+}
+
+function sendMsg(){
+  const input=document.getElementById('chatInput');
+  const body=document.getElementById('chatBody');
+  if(!input.value)return;
+
+  body.innerHTML+=`<p><strong>Você:</strong> ${input.value}</p>`;
+
+  let resposta='';
+  const msg=input.value.toLowerCase();
+
+  if(msg.includes('alarme')||msg.includes('sensor')){
+    resposta='Trabalhamos com instalação e manutenção de alarmes e sensores para residências e empresas.';
+  } else if(msg.includes('câmera')){
+    resposta='Instalamos sistemas de câmeras com acesso pelo celular e gravação 24h.';
+  } else if(msg.includes('preço')||msg.includes('valor')){
+    resposta='Os valores variam conforme o projeto. Posso te encaminhar para um consultor no WhatsApp 😊';
+  } else if(msg.includes('cidade')){
+    resposta='Atendemos Santa Vitória do Palmar e região.';
+  } else {
+    resposta='Perfeito! Vou encaminhar sua dúvida para um de nossos consultores.';
+  }
+
+  setTimeout(()=>{
+    body.innerHTML+=`<p><strong>Elisa:</strong> ${resposta}</p>`;
+    body.scrollTop=body.scrollHeight;
+  },600);
+
+  input.value='';
+}
+</script>
+
+</body>
+</html>
